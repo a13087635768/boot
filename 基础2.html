@@ -1,0 +1,121 @@
+<html>
+<head>
+  <title>基础2</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/302292 (zh-CN); Windows/6.1.7600 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="361"/>
+<h1>基础2</h1>
+
+<div>
+<span style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><font color="#FF0000" style="font-size: 24px;">数据类型转换：</font><br/>
+    <br/>
+     小数据类型--------&gt;大数据类型     自动类型转换<br/><br/>
+    <br/>
+     大数据类型---------&gt;小数据类型    强制类型转换<br/><br/>
+     强制类型转换的格式：<br/>
+              <br/>
+               小数据类型  变量名 = (小数据类型)大数据类型<br/>
+    <br/>
+数据类型转换要注意的细节：<br/>
+     1. 凡是byte、short 、 char数据类型数据在运算的时候都会自动转换成int类型的数据再运算。<br/>
+     2. 两个不同数据类型的数据在运算的时候，结果取决于大的数据类型。<br/><div><br/></div><div style="font-size: 24px;"><font color="#FF0000">运算符：</font></div><div><span style="font-size: 19px;"><font color="#1C3387">算术运算符:</font></span><br/>
+     + (正数、加法、连接符)<br/>
+     连接符的作用： 让任何的数据都可以与字符串进行拼接。<br/>
+     如果+号用于字符串的时候，那么+号就是一个连接符，并不是 做加法功能了。<br/><br/>
+     连接符要注意：任何类型的数据与字符串使用连接符连接，那么结果都是字符串类型的数据。<br/>
+     -<br/>
+     *<br/>
+     / (除法)<br/>
+     %(取模、取余数)<br/></div><div><br/></div><div style="font-size: 19px;"><font color="#1C3387">自增减</font></div><div>     ++ （自增） :  自增就是相当于操作数+1.<br/><br/>
+     前自增：++位于操作数的前面。  比如： ++a；<br/>
+    <br/>
+     前自增：先自增，后使用。<br/>
+                   <br/>
+---------------------------------------------- ---------------------------------------------- <br/>
+     后自增： 先使用，后自增。</div><div>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div><div><br/></div><div><div>    自减： 操作数-1.</div><br/>
+前自减: --位于操作数的前面。  --操作数<br/><br/>
+前自减： 先自减，后使用。<br/><br/>
+----------------------------------------------<br/><br/>
+后自减：--位于操作数的后面。 操作数--；<br/><br/>
+后自减： 先使用，后自减。</div><div><br/></div><div><b>后自增在jvm的运行原理</b>：<br/>
+    <br/>
+     因为后自增要使用 到没有+1之前 的值，那么jvm会先声明一个变量用于保存没有+1之前的值。</div><div><font color="#FF0000">举例子：</font><br/>
+          1. int temp = i; // 声明了一个临时变量用于记录了i没有加1之前的值。<br/>
+          2. 自增。  i = i+1;   i = 1;<br/>
+          3. temp把用作了表达式 的结果。<br/>
+    <br/>
+     i的值发生了几次变化：<br/>
+               i = 0 -----&gt; 1----&gt; 0</div><div><span style="font-size: 21px;"><font color="#1C3387">赋值运算符：</font></span><br/>
+     =  (赋值运算符)<br/>
+     +=<br/>
+     -=<br/>
+     *=<br/>
+     /=<br/>
+     %=<br/>
+    <br/><br style="font-size: 19px;"/><font color="#1C3387" style="font-size: 21px;">比较运算符：</font></div><div> 比较运算符的结果都是返回一个布尔值的。<br/><br/>
+     == (判断是否等于)<br/>
+     ==用于比较两个基本数据类型数据的时候，比较的是两个变量所存储的值是否一致.<br/>
+     ==用于比较两个引用类型变量的数据时候，比较的是两个 引用类型变量所记录的内存地址是否一致.<br/><br/><br/>
+     != (不等于)<br/>
+     &gt; (大于)<br/>
+     &lt; (小于)<br/>
+     &gt;= (大于等于)<br/>
+     &lt;= (小于等于)</div><div><br/><font color="#1C3387" style="font-size: 21px;">逻辑运算符 ：</font></div><div><br/></div><div>逻辑运算符的作用是用于连接布尔表达式的。 </div><div><br/>
+     &amp; （与,并且）<br/>
+规律： 只有左右变量同时 为true，那么结果才是true，否则就为false。<br/><br/>
+     |  (或,或者)<br/><br/>
+规律： 只要两边的布尔表达式有一边为true，那么结果就为true，只有两边同时为false 的时候，结果才是false.<br/><br/>
+     ^  (异或)<br/><br/>
+规律： 只要两边的布尔表达式 结果不一致，那么结果就为true，如果左右两边 的布尔表达式一致，那么就为false.<br/><br/>
+     ！ (非)<br/><br/>
+--------------------<br/>
+     &amp;&amp; (短路与\双与)<br/><br/>
+短路与和单与符号的相同与不同点：<br/>
+    <br/>
+     相同点： 短路与和单与运算 的结果是一样的。<br/><br/>
+     不同点： 使用短路与的时候，如果左边的布尔表达式为false，则不会在运算右边的布尔表达式，从而提高了<br/>
+     效率。使用单与的时候，即使发现左边的布尔表达式为false，还是会运算右边的布尔表达式的。<br/><br/><br/>
+只有左边的布尔表达式为false时，双与的效率才要高于单与的.<br/><br/><br/>
+     || (短路或\双或)<br/><br/><br/>
+短路或与单或的相同点与不同点：<br/>
+    <br/>
+     相同点：运算的结果是一致 的。<br/><br/>
+     不同点：使用短路或的时候，当发现左边的布尔表达式为true时，则不会运算右边的布尔表达式。<br/>
+     使用单或的时候 发现左边的布尔表达式为true，还是会运算右边布尔表达式。</div><div><br/></div><div style="font-size: 19px;"><font color="#1C3387">位运算符：</font></div><div><br/></div><div>位运算符就是直接操作二进制位的。<br/>
+     &amp; (与)<br/>
+     | (或)<br/>
+     ^ (异或)<br/>
+     ~  (取反)<br/><br/>
+规律： 如果操作数A连续异或同一个操作数两次，那么结果还是操作数A。<br/><br/>
+应用： 对数据加密.</div><div><span style="font-size: 21px;"><font color="#1C3387">移位运算符：</font></span><br/>
+     &lt;&lt;(左移)<br/>
+规律：一个操作数进行左移运算的时候，结果就是等于操作数乘以2的n次方，n就是左移 的位数.<br/>
+     3&lt;&lt;1 = 3 *2(1) = 6;<br/>
+     3&lt;&lt;2 = 3*2(2) = 12<br/>
+     3&lt;&lt;3 = 3*2(3) = 24<br/>
+    <br/>
+     &gt;&gt;(右移)<br/><br/>
+规律：一个操作数在做右移运算的时候，实际上就是等于该操作数除以2的n次方，n就是右移的位数。<br/><br/>
+     3&gt;&gt;1 = 3 / 2(1) = 1<br/>
+     3&gt;&gt;2 = 3 / 2(2) = 0 。。<br/><br/>
+    <br/>
+     &gt;&gt;&gt;(无符号右移) ：<br/><br/>
+无符号右移与右移的区别：进行右移运算的时候，如果操作数是一个正数，那么左边的空缺位使用0补，<br/>
+如果操作数是一个负数，那么左边的空缺位使用1补。而使用无符号右移的时候，不管是正数还是负数都<br/>
+统一使用0补。<br/><br/><br/>
+笔试题目：使用最高的效率算出2乘以8的结果。<br/>
+          2&lt;&lt;3 = 2*2(3) = 16;</div><div><span style="font-size: 19px;"><font color="#1C3387">三元运算符(三目运算符)</font></span><br/><br/>
+格式;<br/>
+     布尔表达式？值1:值2  ;<br/><br/>
+三元运算符要注意的细节：<br/>
+     使用三元运算符的时候，一定要使用该表达式返回的结果，或者是定义一个变量接收该表达式返回的结果。</div><div><br/></div><div><br/></div><div style="font-size: 24px;"><font color="#FF0000">负数的储存原理图</font></div><div><br/></div><div><br/></div><div><img src="基础2_files/负数的存储原理.png" type="image/png" height="541" style="cursor: default;cursor: default;cursor: default;cursor: default;" width="1359"/></div><div><span style="font-size: 24px;"><font color="#FF0000">左移原理图</font></span><img src="基础2_files/左移.png" type="image/png" height="541" style="cursor: default;cursor: default;" width="1359"/></div><div><br/></div><div style="font-size: 21px;"><font color="#FF0000">位运算符</font></div><div><br/></div><div><br/></div><div><br/></div><div><img src="基础2_files/位运算符.png" type="image/png" height="541" style="cursor: default;cursor: default;" width="1359"/></div><div><br/></div></span>
+</div></body></html> 

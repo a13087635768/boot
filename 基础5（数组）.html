@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>基础5（数组）</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/302292 (zh-CN); Windows/6.1.7600 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="356"/>
+<h1>基础5（数组）</h1>
+
+<div>
+<span><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><div style="font-size: 24px;"><font color="#FF0000">数组：</font></div><div><br/></div><div>数组是存储同一种数据类型数据的集合容器。<br/><br/><font color="#1C3387" style="font-size: 19px;">数组的定义格式：</font><br/>
+     数据类型[]  变量名 = new 数据类型[长度];<br/><br/>
+分析数组：  <br/>
+     左边： int[] arr    声明了一个int类型的的数组变量，变量名为arr。<br/>
+          int : 表示该数组容器只能存储int类型的数据。<br/>
+          [] ： 这是一个数组类型。<br/>
+          arr ： 变量名.<br/>
+    <br/>
+     右边：new int[50]; 创建了一个长度为50的int类型数组对象。<br/>
+          new ： 创建数组对象的关键字。<br/>
+          int:  表示该数组对象只能存储int类型数据。<br/>
+          []： 表示是数组类型。<br/>
+          50 : 该数组最多能存储50个数据。数组的容量。<br/><br/>
+         <br/>
+数组的好处： 对分配到数组对象中每一个数据都分配一个编号（索引值、角标、下标）,索引值的范围是从0开始，最大是： 长度-1.<br/><br/><br/><br/><font color="#FF0000">局部变量</font>： 如果一个变量是在一个方法（函数）的内部声明的，那么该变量就是一个局部变量。<br/><br/><font color="#FF0000">成员变量：</font> 成员变量就是定义在方法之外，类之内的.<br/></div><div><span style="font-size: 24px;"><font color="#FF0000"><span style="font-size: 24px;"><font color="#FF0000"><br/></font></span></font></span></div><div><span style="font-size: 24px;"><font color="#FF0000">数组的初始化方式：</font></span><br/>
+    <br/>
+     动态初始化:<br/>
+          数据类型[] 变量名 = new 数据类型[长度];<br/><br/>
+     静态初始化：    <br/>
+          数据类型[] 变量名 = {元素1，元素2.....};<br/><br/><br/>
+如果程序一开始你就已经确定了数据，那么这时候建议使用静态初始化。如果<br/>
+数据一开始还不太明确，这时候就建议使用动态初始化。</div><div><span style="font-size: 24px;"><font color="#FF0000"><br/></font></span></div><div><span style="font-size: 24px;"><font color="#FF0000"><br/></font></span></div><div><span style="font-size: 24px;"><font color="#FF0000">自带函数数组工具</font></span><br/><font color="#FF0000" style="font-size: 24px;">toString();<br/>
+排序（sort）<br/>
+找元素在数组中的位置(二分查找法)  binarySearch<br/><br/>
+数组的工具类（Arrays）：<br/></font><br/><br/>
+作业1： 自定实现一个Arrays的toString方法。<br/></div><span style="font-size: 24px;"><font color="#FF0000">数组的特点：</font></span><br/>
+     1. 数组只能存储同一种 数据类型的数据。<br/>
+     2. 数组是会给存储到数组中 的元素分配一个索引值的，索引值从0开始，最大的索引值是length-1；<br/>
+     3. 数组一旦初始化，长度固定。<br/>
+     4. 数组中的元素与元素之间的内存地址是连续的
+<div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">二维数组</font></span>： </div><div><br/></div><div>二维数组就是数组中的数组。<br/><br/>
+一根                    变量<br/><br/>
+一盒     20根       一维数组<br/><br/>
+一条     10包   20根   二维数组<br/><br/><br/>
+二维数组 的定义格式：<br/>
+    <br/>
+     数据类型[][] 变量名 = new 数据类型[长度1][长度2];<br/><br/>
+     长度1：一条烟有多少盒。<br/><br/>
+     长度2： 一盒烟有多少根。<br/><br/><br/>
+二维数组 的初始化方式：<br/>
+    <br/>
+     动态初始化:<br/>
+         <br/>
+          数据类型[][] 变量名 = new 数据类型[长度1][长度2];<br/><br/><br/>
+     静态初始化：<br/><br/>
+          数据类型[][]  变量名 = {{元素1,元素2...},{元素1,元素2...},{元素1,元素2...} ..}</div><div><span style="font-size: 24px;"><font color="#FF0000"><br/></font></span></div><div><span style="font-size: 24px;"><font color="#FF0000"><br/></font></span></div><div><span style="font-size: 24px;"><font color="#FF0000">数组中最常见的问题：</font></span><br/>
+    <br/>
+     1. NullPointerException 空指针异常<br/>
+     原因： 引用类型变量没有指向任何对象，而访问了对象的属性或者是调用了对象的方法。\<br/><br/>
+     2. ArrayIndexOutOfBoundsException 索引值越界。<br/>
+     原因：访问了不存在的索引值。</div><div><br/></div><div><br/></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 24px;">冒泡排序</span></span></div><div><span style="font-size: 16px;">public static void selectSort(int[] arr){</span></div><div><span style="font-size: 16px;"><br/></span></div><div><span style="font-size: 16px;">        //把最大值放在首位置。</span></div><div><span style="font-size: 16px;">        for(int j = 0; j&lt;arr.length-1; j++){  //  控制的是轮数。</span></div><div><span style="font-size: 16px;">            for(int i = j+1 ; i&lt;arr.length ; i++){ // 找出最大值</span></div><div><span style="font-size: 16px;">                if(arr[i]&gt;arr[j]){</span></div><div><span style="font-size: 16px;">                    //交换位置</span></div><div><span style="font-size: 16px;">                    int temp = arr[i];</span></div><div><span style="font-size: 16px;">                    arr[i] = arr[j];</span></div><div><span style="font-size: 16px;">                    arr[j] = temp;</span></div><div><span style="font-size: 16px;">                }</span></div><div><span style="font-size: 16px;">            }</span></div><div><span style="font-size: 16px;">        }</span></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 24px;">二分法排序（必须是有顺序的数组）</span></span></div><div><span style="font-size: 16px;">    public static int halfSearch(int[] arr, int target){</span></div><div><span style="font-size: 16px;">        //定义三个变量分别记录最大、最小、中间的查找范围索引值</span></div><div><span style="font-size: 16px;">        int max = arr.length-1;</span></div><div><span style="font-size: 16px;">        int min = 0;</span></div><div><span style="font-size: 16px;">        int mid = (max+min)/2;</span></div><div><span style="font-size: 16px;">        while(true){</span></div><div><span style="font-size: 16px;">            if(target&gt;arr[mid]){</span></div><div><span style="font-size: 16px;">                min = mid+1;</span></div><div><span style="font-size: 16px;">            }else if(target&lt;arr[mid]){</span></div><div><span style="font-size: 16px;">                max = mid -1;</span></div><div><span style="font-size: 16px;">            }else{</span></div><div><span style="font-size: 16px;">                //找到了元素</span></div><div><span style="font-size: 16px;">                return mid;</span></div><div><span style="font-size: 16px;">            }</span></div><div><span style="font-size: 16px;"><br/></span></div><div><span style="font-size: 16px;">            //没有找到的情况</span></div><div><span style="font-size: 16px;">            if (max&lt;min){</span></div><div><span style="font-size: 16px;">                return -1;</span></div><div><span style="font-size: 16px;">            }</span></div><div><span style="font-size: 16px;"><br/></span></div><div><span style="font-size: 16px;">            //重新计算中间索引值</span></div><div><span style="font-size: 16px;">            mid = (min+max)/2;</span></div><div><span style="font-size: 16px;">        }</span></div><div><span style="font-size: 16px;"><br/></span></div><div><span style="font-size: 16px;">    }</span></div><div><span style="font-size: 16px;"><br/></span></div><div><span style="font-size: 16px;"><br/></span></div><div><span style="font-size: 24px;"><span style="color: rgb(255, 70, 53);"><br/></span></span></div></div></span>
+</div></body></html> 

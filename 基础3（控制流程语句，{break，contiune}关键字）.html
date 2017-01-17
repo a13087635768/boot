@@ -1,0 +1,132 @@
+<html>
+<head>
+  <title>基础3（控制流程语句，{break，contiune}关键字）</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/302292 (zh-CN); Windows/6.1.7600 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="358"/>
+<h1>基础3（控制流程语句，{break，contiune}关键字）</h1>
+
+<div>
+<span><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><font color="#FF0000" style="font-size: 24px;">控制流程语句:</font><br/><br/>
+语句: 使用分号分隔的代码就是一个语句。<br/><br/>
+顺序语句: 按照代码顺序从上往下执行所有的代码就是顺序语句，，
+<div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">控制流程语句之（if）判断语句</font></span><br/><br/>
+if判断语句的格式：<br/>
+    <br/>
+格式1：适用于一种情况使用。<br/><br/>
+     if(判断的条件){<br/>
+          符合条件执行的代码;         <br/>
+     }<br/><br/><br/>
+格式2 : 适用于两种情况下去使用的。<br/>
+    <br/>
+     if(判断条件){<br/>
+          符合条件执行的代码<br/>
+     }else{<br/>
+          不符合条件执行的代码；<br/>
+     }<br/><br/><br/>
+三元运算符的格式：布尔表达式？值1：值2;<br/><br/>
+if-else 与三元运算符非常像：<br/><br/>
+     三元运算符的优点： 结构比较简洁。<br/>
+    <br/>
+     三元运算符的缺点： 符合条件必须要返回一个结果，不能执行语句。<br/><br/><br/><br/>
+格式三： 适用于多种情况下去使用的。<br/>
+    <br/>
+     if(判断条件1){<br/>
+          符合条件1执行的代码<br/>
+     }else if(判断条件2){<br/>
+          符合条件2执行的代码<br/>
+     }else if(判断条件3){<br/>
+          符合条件3执行的代码<br/>
+     }......else{<br/>
+          都不符合上述 的条件执行的代码    <br/>
+     }<br/><br/><br/><br/><span style="font-size: 19px;"><font color="#1C3387">if语句要注意的细节：</font></span><br/>
+     1. 如果符合条件后只有一个语句需要执行，那么可以省略大括号。但是建议不要省略，因为结构不清晰。<br/>
+     2. if语句的判断条件后不能添加分号，否则会影响到执行的效果的，</div><div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">控制流程语句之----switch选择判断语句</font></span><br/><br/>
+switch语句的格式：<br/>
+    <br/>
+     switch(你的选择){<br/>
+         <br/>
+          case 值1：<br/>
+               符合值1执行的代码<br/>
+               break;<br/>
+          case 值2：<br/>
+               符合值 2执行的代码<br/>
+               break;<br/>
+          case 值3：<br/>
+               符合值 3执行的代码<br/>
+               break;<br/>
+          case 值4：<br/>
+               符合值 4执行的代码<br/>
+               break;<br/>
+          ......<br/><br/>
+          default:<br/>
+               你的选择都符合上述的选项时执行的代码;<br/>
+               break;<br/>
+     }<br/><br/><br/>
+switch语句要注意的事项：<br/>
+     1. switch语句使用的变量只能是byte、 char、 short、int、 String数据类型，String数据类型是从jdk7.0的时候开始支持的。<br/>
+     2. case后面跟 的数据必须是一个常量。    <br/>
+     3. switch的停止条件：<br/>
+          switch语句一旦匹配上了其中的一个case语句，那么就会执行对应的case中的语句代码，执行完毕之后如果没有<br/>
+          遇到break关键字或者是结束switch语句的大括号，那么switch语句不会再判断，按照代码的顺序从上往下执行<br/>
+          所有的代码。直到遇到break或者是结束siwitch语句的大括号为止。<br/><br/>
+     4. 在switch语句中不管代码的顺序如何，永远都是会先判断case语句，然后没有符合的情况下才会执行default语句。<br/><br/><br/><br/><span style="font-size: 19px;"><font color="#1C3387">if--else if---else if 语句与switch语句非常的相似：</font></span><br/>
+    <br/>
+     switch语句的优点：switch语句的结构清晰。<br/><br/>
+     switch缺点：如果 判断的条件是一个区间范围的，使用switch操作就非常的麻烦了。<br/></div><div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">循环语句----while循环语句</font></span><br/><br/>
+while循环 语句的格式:<br/><br/>
+     while(循环的条件){<br/>
+          循环语句；<br/>
+     }<br/><br/>
+while循环语句要注意的事项：<br/>
+     1. while循环语句一般是通过一个变量控制其循环的次数。<br/>
+     2. while循环语句的循环体代码如果只有一个语句的时候，那么可以省略大括号。但是也是不建议大家省略。<br/>
+     3. while循环语句的判断条件后面不能跟有分号，否则会影响到执行的效果</div><div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">控制流程语句----do while循环语句</font></span><br/><br/>
+格式：<br/>
+     do{<br/>
+    <br/>
+     }while(判断条件);<br/></div><div><br/></div><div><span style="font-size: 21px;"><font color="#1C3387">while循环语句与do-while循环语句的区别：</font></span><br/>
+     while循环语句是先判断后执行循环语句的，do-while循环语句<br/>
+     是先执行，后判断。不管条件是否满足至少会执行一次。</div><div><br/></div><div><br/></div><div><font color="#FF0000" style="font-size: 24px;">控制流程语句之---for循环语句</font><br/><br/><br/>
+for循环语句的格式:<br/><br/>
+     for(初始化语句;判断语句;循环后的语句){<br/>
+          循环语句;<br/>
+     }<br/><br/><br/><span style="font-size: 19px;"><font color="#1C3387">for循环语句 要注意的事项：</font></span><br/>
+     1. for(;;)这种写法 是一个死循环语句，相当于while(true);<br/>
+     2. for循环语句的初始化语句只会执行一次，只是在第一次循环的时候执行而已。</div><div>     3. for循环语句的循环体语句只有一句的时候，可以省略大括号不写。但是不建议省略。</div><div><font color="#FF0000" style="font-size: 24px;">控制流程语句之---for each循环语句</font></div><div><span style="font-size: 21px;">     for(object i:集合或者数组){</span></div><div><span style="font-size: 21px;">     循环体（i===i是具体的参数）；<br/></span></div><div><span style="font-size: 21px;">}</span></div><div><br/></div><div style="font-size: 24px;"><font color="#FF0000">转义字符：</font></div><div><br/></div><div>特殊字符使用”\”把其转化成字符的本身输出，那么使用”\”的字符称作为转移字符。<br/><br/>
+需求： 在控制台上打印一个 hello&quot; world<br/><br/>
+常见的转义字符有：<br/>
+     \b     Backspace （退格键）<br/>
+     \t     Tab    制表符(制表符的作用就是为了让一列对齐)  一个tab一般等于四个空格。<br/>
+    <br/>
+     \n     换行<br/>
+     \r     回车  把光标移动到一行的首位置上。<br/>
+    <br/>
+注意： 如果是在windows系统上操作文件的时候需要换行，是需要\r\n一起使用的。<br/>
+如果是在其他的操作系统上需要换行，仅需要\n即可。<br/></div><div><br/></div><div style="font-size: 24px;"><font color="#FF0000">关键字：</font></div><div><span style="font-size: 24px;"><font color="#FF0000">break、</font></span><br/><br/>
+break适用范围：只能用于switch或者是循环语句中。<br/><br/>
+break作用：<br/>
+     1. break用于switch语句的作用是结束一个switch语句。<br/>
+     2. break用于循环语句中的作用是结束当前所在的循环语句。<br/><br/>
+笔试题目：break目前位于内层的for循环，如何才能让break作用于外层 的for循环。<br/>
+     可以标记解决<br/><br/><br/>
+标记的命名只要符合标识符的命名规则即可。<br/></div><div><br/></div><div><font color="#FF0000" style="font-size: 24px;">continue关键字</font><br/><br/>
+continue的适用范围： continue只能用于循环语句。<br/><br/>
+continue的作用：continue的作用是跳过本次的循环体内容。继续下一次。<br/><br/>
+continue要注意的事项：<br/>
+     1. 在一种情况下，continue后面不能跟有其他语句，因为是永远都无法执行到。<br/>
+     2. continue 也可以配合标记使用的。</div><div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">return 关键字的作用：</font></span><br/>
+     1. 返回数据给函数的调用者。<br/>
+     2. 函数一旦执行到了return关键字，那么该函数马上结束。 (能结束一个函数)<br/><br/>
+注意：一个函数的返回值类型 是void，那么也可以出现return关键字，但是return关键字的后面不能有数据。<br/><br/><span style="font-size: 24px;"><font color="#FF0000">break关键字与return关键字的区别：</font></span><br/>
+     1.break关键字是结束一个循环。</div><div>     2. return关键字是结束一个函数。</div><div><br/></div><div><br/></div><div><span style="font-size: 32px;"><span style="color: rgb(255, 70, 53);">this关键字：</span></span></div><div><span style="font-size: 19px;"><span style="color: rgb(255, 0, 0);">能干什么：</span></span></div><div>this关键字代表了所属函数的调用者对象。</div><div><br/></div><div><br/></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 19px;">this关键字作用</span></span>：</div><div>    1. 如果存在同名成员变量与局部变量时，在方法内部默认是访问局部变量的数据，可以通过this关键字指定访问成员变量的数据。</div><div>    2. 在一个构造函数中可以调用另外一个构造函数初始化对象。</div><div><br/></div><div><br/></div><div>this关键字调用其他的构造函数要<span style="color: rgb(255, 0, 0);">注意的事项</span>：</div><div>    <span style="color: rgb(255, 0, 0);">1. this关键字调用其他的构造函数时，this关键字必须要位于构造函数中 的第一个语句。</span></div><div>    2. this关键字在构造函数中不能出现相互调用 的情况，因为是一个死循环。</div><div><br/></div><div><br/></div><div>this关键字要注意事项：</div><div>    1. 存在同名的成员变量与局部变量时，在方法的内部访问的是局部变量(java 采取的是“就近原则”的机制访问的。)</div><div>    2. 如果在一个方法中访问了一个变量，该变量只存在成员变量的情况下，那么java编译器会在该变量的 前面添加this关键字。</div><div><br/></div><div><br/></div></div></span>
+</div></body></html> 

@@ -1,0 +1,144 @@
+<html>
+<head>
+  <title>小习题</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/302292 (zh-CN); Windows/6.1.7600 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="357"/>
+<h1>小习题</h1>
+
+<div>
+<span style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><font color="#FF0000" style="font-size: 24px;">函数做加法功能。</font><div><span style="font-size: 11px;">class Demo3</span><br style="font-size: 11px;"/><span style="font-size: 11px;">{</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static void main(String[] args)</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     {</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          //System.out.println(&quot;Hello World!&quot;);</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          //add1(1,2);</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          add(1,2.0);</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">// 这些函数都是在做加法运算。</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static double add(int a, int b){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          System.out.println(&quot;两个参数的总和: &quot;+ (a+b));</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          return 3.14;</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">    </span><br style="font-size: 11px;"/><span style="font-size: 11px;">     //重复定义</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static int add(int a, double b){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          System.out.println(&quot;double参数的总和: &quot;+ (a+b));</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          return 12;</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">    </span><br style="font-size: 11px;"/><span style="font-size: 11px;">/*</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static void add(int a , int b , int c){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          System.out.println(&quot;三个参数的总和: &quot;+ (a+b+c));</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static void add(int a , int b , int c,int d){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          System.out.println(&quot;四个参数的总和: &quot;+ (a+b+c+d));</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">*/</span><br style="font-size: 11px;"/><span style="font-size: 11px;">}</span><br/></div><div><span style="font-size: 11px;"><br/></span></div><div>/*<br/><font color="#FF0000"><span style="font-size: 24px;">需求： 定义一个函数接收一个int类型的数组对象, 把数组中的最大值放在数组中的第一位。</span><br style="font-size: 24px;"/><br style="font-size: 24px;"/><span style="font-size: 24px;">选择排序(直接排序)：使用一个元素与其他 的元素挨个比较一次，符合条件交换位置。</span></font><br/><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">*/</span><br style="font-size: 11px;"/><span style="font-size: 11px;">class Demo9{</span><br style="font-size: 11px;"/><span style="font-size: 11px;">    </span><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static void main(String[] args)</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     {</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          int[] arr = {12,5,17,8,9};  //对于5元素的数组，只需要找出4个最大值就可以排序了。</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          selectSort(arr);</span><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">     public static void selectSort(int[] arr){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">         </span><br style="font-size: 11px;"/><span style="font-size: 11px;">          //把最大值放在首位置。</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          for(int j = 0; j&lt;arr.length-1; j++){  //  控制的是轮数。</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               for(int i = j+1 ; i&lt;arr.length ; i++){ // 找出最大值</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    if(arr[i]&gt;arr[j]){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                         //交换位置</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                         int temp = arr[i];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                         arr[i] = arr[j];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                         arr[j] = temp;</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">         </span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">/*</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          //把老二放在第二个位置</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          for(int i = 2  ; i&lt; arr.length ; i++){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               if(arr[i]&gt;arr[1]){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    int temp = arr[i];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    arr[i] = arr[1];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    arr[1] = temp;</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">         </span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">          //把老三放在第三个位置</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          for(int i = 3  ; i&lt; arr.length ; i++){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               if(arr[i]&gt;arr[2]){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    int temp = arr[i];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    arr[i] = arr[2];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    arr[2] = temp;</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">          //把老四放在第四个位置</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          for(int i = 4  ; i&lt; arr.length ; i++){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               if(arr[i]&gt;arr[3]){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    int temp = arr[i];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    arr[i] = arr[3];</span><br style="font-size: 11px;"/><span style="font-size: 11px;">                    arr[3] = temp;</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               }</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">*/</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">         </span><br style="font-size: 11px;"/><span style="font-size: 11px;">          //遍历数组，查看效果</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          System.out.print(&quot;目前的元素：&quot;);</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          for (int i = 0 ; i&lt;arr.length  ;i++){</span><br style="font-size: 11px;"/><span style="font-size: 11px;">               System.out.print(arr[i]+&quot;,&quot;);</span><br style="font-size: 11px;"/><span style="font-size: 11px;">          }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">     }</span><br style="font-size: 11px;"/><br style="font-size: 11px;"/><br style="font-size: 11px;"/><span style="font-size: 11px;">}</span><br/></div><div><span style="font-size: 11px;"><br/></span></div><div><font color="#FF0000"><span style="font-size: 24px;">需求： 定义一个函数接收一个int类型的数组对象, 把数组中的最大值放在数组中的最后一位。</span><br style="font-size: 24px;"/><br style="font-size: 24px;"/><span style="font-size: 24px;">冒泡排序：冒泡排序的思想就是使用相邻的两个 元素挨个比较一次，符合条件交换位置。</span><br style="font-size: 24px;"/></font><br/>
+*/<br/><br/>
+class Demo10<br/>
+{<br/>
+     public static void main(String[] args)<br/>
+     {<br/>
+          int[] arr = {12,8,17,5,9}; // 最大的索引值: 4   容量：5<br/>
+          bubbleSort(arr);<br/>
+     }<br/><br/><br/>
+     public static void bubbleSort(int[] arr){<br/>
+          // 把最大值放在最后一个位置<br/>
+          for(int j = 0 ; j&lt;arr.length-1 ; j++){ //控制轮数<br/>
+               for(int i = 0 ; i&lt;arr.length-1-j  ; i++){  // 找出一个最大值 <br/>
+                    //相邻的元素比较<br/>
+                    if(arr[i]&gt;arr[i+1]){<br/>
+                         int temp  = arr[i];<br/>
+                         arr[i] = arr[i+1];<br/>
+                         arr[i+1] = temp;<br/>
+                    }<br/>
+               }<br/>
+          }<br/><br/>
+/*<br/>
+    <br/>
+          //把老二放在倒数第二个位置上。<br/>
+          for(int i = 0 ;  i &lt;arr.length-1-1 ; i++){<br/>
+               if(arr[i]&gt;arr[i+1]){<br/>
+                    int temp = arr[i];<br/>
+                    arr[i] = arr[i+1];<br/>
+                    arr[i+1] = temp;<br/>
+               }    <br/>
+          }<br/><br/>
+    <br/>
+          //把老三放在倒数第三个位置上。<br/>
+          for(int i = 0 ;  i &lt;arr.length-1-2 ; i++){<br/>
+               if(arr[i]&gt;arr[i+1]){<br/>
+                    int temp = arr[i];<br/>
+                    arr[i] = arr[i+1];<br/>
+                    arr[i+1] = temp;<br/>
+               }    <br/>
+          }<br/><br/>
+          //把老四放在倒数第四个位置上。<br/>
+          for(int i = 0 ;  i &lt;arr.length-1-3 ; i++){<br/>
+               if(arr[i]&gt;arr[i+1]){<br/>
+                    int temp = arr[i];<br/>
+                    arr[i] = arr[i+1];<br/>
+                    arr[i+1] = temp;<br/>
+               }    <br/>
+          }<br/><br/>
+*/<br/><br/><br/>
+          //遍历数组，查看效果<br/>
+          System.out.print(&quot;目前的元素：&quot;);<br/>
+          for (int i = 0 ; i&lt;arr.length  ;i++){<br/>
+               System.out.print(arr[i]+&quot;,&quot;);<br/>
+          }<br/>
+         <br/>
+     }<br/><br/>
+}<br/></div><div><br/></div><div><font color="#FF0000"><span style="font-size: 24px;">需求：定义一个函数接收一个数组对象和一个要查找的目标元素，函数要返回该目标元素在</span><br style="font-size: 24px;"/><span style="font-size: 24px;">数组中的索引值，如果目标元素不存在数组中，那么返回-1表示。</span><br style="font-size: 24px;"/><br style="font-size: 24px;"/><br style="font-size: 24px;"/><span style="font-size: 24px;">折半查找法(二分法): 使用前提必需是有序的数组。</span><br style="font-size: 24px;"/></font><br/><br/>
+*/<br/>
+class Demo12<br/>
+{<br/>
+     public static void main(String[] args)<br/>
+     {<br/>
+          int[] arr = {12,16,19,23,54};<br/>
+          //int index = searchEle(arr,23);<br/>
+          int index = halfSearch(arr,116);<br/>
+          System.out.println(&quot;元素所在的索引值是：&quot;+ index);<br/>
+     }<br/>
+    <br/>
+         <br/>
+     public static int halfSearch(int[] arr, int target){<br/>
+          //定义三个变量分别记录最大、最小、中间的查找范围索引值<br/>
+          int max = arr.length-1;<br/>
+          int min = 0;<br/>
+          int mid = (max+min)/2;<br/>
+          while(true){<br/>
+               if(target&gt;arr[mid]){<br/>
+                    min = mid+1;<br/>
+               }else if(target&lt;arr[mid]){<br/>
+                    max = mid -1;<br/>
+               }else{<br/>
+                    //找到了元素<br/>
+                    return mid;<br/>
+               }<br/><br/>
+               //没有找到的情况<br/>
+               if (max&lt;min){<br/>
+                    return -1;<br/>
+               }<br/><br/>
+               //重新计算中间索引值<br/>
+               mid = (min+max)/2;<br/>
+          }<br/>
+    <br/>
+     }<br/><br/><br/><br/>
+    <br/>
+     public static int searchEle(int[] arr, int target){<br/>
+          for(int i = 0 ; i&lt;arr.length ; i++){<br/>
+               if(arr[i]==target){<br/>
+                    return i;<br/>
+               }<br/>
+          }<br/>
+          return -1;<br/>
+     }<br/>
+}<br/></div><div>/*<br/><font color="#FF0000"><span style="font-size: 24px;">需求： 定义 一个函数接收一个char类型的数组对象,然后翻转数组中的元素。</span><br style="font-size: 24px;"/><span style="font-size: 24px;">    </span></font><br/>
+char[] arr = {'a','b','c','d','e'};<br/><br/>
+*/<br/>
+class Demo13<br/>
+{<br/>
+     public static void main(String[] args)<br/>
+     {<br/>
+          //System.out.println(&quot;Hello World!&quot;);<br/>
+          char[] arr = {'a','b','c','d','e'};<br/>
+          reverse(arr);<br/><br/>
+     }<br/><br/>
+     public static void reverse(char[] arr){<br/>
+          for(int startIndex = 0 ,endIndex = arr.length-1 ;   startIndex&lt;endIndex ; startIndex++,endIndex--){<br/>
+               char temp = arr[startIndex];<br/>
+               arr[startIndex] = arr[endIndex];<br/>
+               arr[endIndex] = temp;<br/>
+          }<br/><br/>
+          //遍历数组，查看效果<br/>
+          System.out.print(&quot;目前的元素：&quot;);<br/>
+          for (int i = 0 ; i&lt;arr.length  ;i++){<br/>
+               System.out.print(arr[i]+&quot;,&quot;);<br/>
+          }<br/><br/>
+     }<br/>
+}<br/></div></span>
+</div></body></html> 

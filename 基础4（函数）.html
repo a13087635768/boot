@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>基础4（函数）</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/302292 (zh-CN); Windows/6.1.7600 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="360"/>
+<h1>基础4（函数）</h1>
+
+<div>
+<span><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><div style="font-size: 32px;"><font color="#FF0000">函数</font></div>
+（方法）:<br/><br/><span style="font-size: 19px;"><font color="#1C3387">函数的作用</font></span>： 提高功能代码的复用性。<br/><br/><br/>
+目前存在的问题：以下的代码都是在做一个加法功能，而<br/>
+这里加法功能 的代码目前是没有任何的复用性的。<br/><br/>
+解决方案： 如果一个功能的代码要被复用起来，那么这时候可以把<br/>
+这里的功能代码封装起来，在java中把功能代码封装起来的是以函数的形式体现的。<br/><br/><br/><span style="font-size: 24px;"><font color="#FF0000">函数的定义格式：</font></span><br/>
+    <br/>
+     修饰符  返回值类型  函数名(形式参数..){<br/>
+          需要被封装的功能代码；<br/>
+          return 结果;<br/>
+     }<br/>
+    <br/><br/>
+分析函数：<br/>
+     public static int add(){<br/>
+          int a =2;<br/>
+          int b =3;<br/>
+          return a+b;<br/>
+     }<br/>
+    <br/>
+     修饰符: public static<br/><br/>
+     返回值类型： int 。 返回值类型就是指函数运行完毕后，返回的结果的数据类型。<br/>
+     注意： 某些函数是没有结果返回给调用者的,那么这时候返回值类型是void。<br/><br/>
+    <br/>
+     函数名： add   函数名的作用：如果需要调用该函数就需要使用的函数名。 函数名只要符合标识符的命名规则即可。<br/>
+               函数名的命名规范： 首单词全部小写，其他单词的首字母大写，其他小写。<br/>
+    <br/>
+     形式参数： 如果一个函数在运行的时候，存在着数据是要调用者确定 的，那么这时候就应该定义形式参数。<br/><br/>
+     return ： 把一个结果返回给调用者。<br/><br/><br/><br/><span style="font-size: 24px;"><font color="#FF0000">函数的特点：</font></span><br/>
+     1. 函数定义好之后，是需要被调用才会执行的。 main函数是有jvm调用的，不需要我们手动调用。
+<div><br/></div><div><span style="font-size: 24px;"><font color="#FF0000">如何定义一个函数：</font></span><br/>
+     1. 返回值类型。<br/>
+     2. 是否存在未知的参数(是否存在要由调用者确定的参数)。----&gt;形式参数</div><div><span style="font-size: 24px;"><font color="#FF0000">函数的特点：</font></span><br/>
+     1. 函数的作用就是把一个功能代码给封装起来，已达到提高功能代码的复用性。<br/>
+     2. 函数定义好之后是需要被调用才会执行的。</div><div>     3. 如果一个函数没有返回值返回给调用者，那么返回值类型必须是使用void表示。</div><div><span style="color: rgb(255, 70, 53);">====================================================================================================================================</span></div><div style="text-align: center"><span style="color: rgb(255, 0, 0);"><span style="font-size: 32px;">构造函数：</span></span></div><div><br/></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 21px;">构造函数的作用</span></span>： 给对应的对象进行初始化。</div><div><br/></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 21px;">使用形势</span></span></div><div>构造函数的定义的格式：</div><div><br/></div><div>    修饰符  函数名(形式参数){</div><div>        函数体...</div><div>    }</div><div><br/></div><div>构造函数要<span style="color: rgb(255, 70, 53);">注意的细节</span>：</div><div>    1. 构造函数 是没有返回值类型的。</div><div>    2. 构造函数的函数名必须要与类名一致。</div><div>    3. 构造函数并不是由我们手动调用的，而是在创建对应的对象时，jvm就会主动调用到对应的构造函数。</div><div>    4. 如果一个类没有显式的写上一个构造方法时，那么java编译器会为该类添加一个无参的构造函数的。</div><div>    5. 如果一个类已经显式的写上一个构造方法时,那么java编译器则 不会再为该类添加 一个无参 的构造方法。</div><div>    6. 构造函数是 可以在一个类中以函数重载 的形式存在多个 的。</div><div><br/></div><div><br/></div><div>疑问：创建对象时，jvm就会调用到对应的构造方法，那么我们以前没有学构造方法，那么</div><div>以前创建对象时，jvm是否 也会调用构造方法呢？如果有？构造方法从何而来呢？</div><div><br/></div><div>            会调用， java编译器在编译的 时候给加上去的。</div><div><br/></div><div>jdk提供了一个java开发工具(javap.exe)给我们进行反编译的。</div><div><br/></div><div><br/></div><div>javap 反编译工具的使用格式：</div><div><br/></div><div>        javap -c -l -private 类名</div><div><br/></div><div>疑问： java编译器添加 的无参构造方法的权限修饰符是 什么？</div><div>        与类的权限修饰是一致的。</div><div><br/></div><div><br/></div><div><span style="font-size: 21px;"><span style="color: rgb(255, 0, 0);">构造函数与普通 函数的区别</span></span>：   </div><div>    1. 返回值类型的区别：</div><div>        1. 构造函数是没有返回值类型 的，</div><div>        2. 普通函数是有返回值类型的，即使函数没有返回值，返回值类型也要写上void。</div><div>    2. 函数名的区别：</div><div>        1. 构造函数的函数名必须要与类名一致，</div><div>        2. 普通函数的函数名只要符合标识符的命名规则即可。</div><div>    3. 调用方式的区别：</div><div>        1. 构造函数是 在创建对象的时候由jvm调用的。</div><div>        2. 普通函数是由我们使用对象调用的，一个对象可以对象多次普通 的函数，</div><div>    4. 作用上的区别：</div><div>        1. 构造函数 的作用用于初始化一个对象。</div><div>        2. 普通函数是用于描述一类事物的公共行为的。</div><div><span style="color: rgb(255, 70, 53);">====================================================================================================================================</span></div><div><br/></div><div style="text-align: center"><span style="color: rgb(255, 0, 0);"><span style="font-size: 32px;">构造代码块：</span></span></div><div><br/></div><div><span style="font-size: 21px;"><span style="color: rgb(255, 0, 0);">构造代码块的作用</span></span>：给对象进行统一的初始化。</div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 19px;">两者区别</span></span></div><div><span style="font-size: 21px;"><span style="color: rgb(255, 0, 0);">构造函数的作用</span></span>： 给对应的对象进行初始化。</div><div><br/></div><div><span style="font-size: 21px;"><span style="color: rgb(255, 0, 0);">使用方法a</span></span></div><div><br/></div><div>构造代码块的格式：</div><div><br/></div><div>    {</div><div>        构造代码块</div><div>    }</div><div><br/></div><div><span style="color: rgb(255, 70, 53);"><span style="font-size: 24px;">注意</span></span>： 构造代码块的大括号必须位于成员 位置上。</div><div>//  非静态初始化语句块：主动加载块,每生成一个对象加载一次</div><div>    // 静态初始化语句块：主动加载块,仅在第一次对象生成时加载一次</div><div>    // 构造函数:被动加载块</div><div><br/></div><div><br/></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 19px;">代码块的类别：</span></span></div><div>    1. 构造代码块。</div><div>    2. 局部代码块.   大括号位于方法之内。  作用：缩短局部 变量 的生命周期，节省一点点内存。</div><div>    3. 静态代码块  static {}</div><div><br/></div><div><br/></div><div><span style="color: rgb(255, 0, 0);"><span style="font-size: 21px;">构造 代码块要注意的事项：</span></span></div><div>    1. java编译器编译一个java源文件的时候，会把成员变量的声明语句提前至一个类的最前端。</div><div>    2. 成员变量的初始化工作其实都在在构造函数中执行的。</div><div>    3. 一旦经过java编译器编译后，那么构造代码块的代码块就会被移动构造函数中执行，是在构造函数之前执行的，构造函数的中代码是最后执行 的。</div><div>    4. 成员变量的显示初始化与构造代码块 的代码是按照当前代码的顺序执行的。</div><div><br/></div><div style="text-align: center"><span style="font-size: 32px;"><span style="color: rgb(255, 0, 0);">变长参数</span></span></div><div><span style="font-size: 32px;"><span style="color: rgb(255, 0, 0);">在Java1.5之后就可以使用变长参数</span></span></div><div><span style="font-size: 32px;"><span style="color: rgb(255, 0, 0);">使用方法</span></span></div><div><span style="font-size: 19px;">public void 方法名（数据类型 ...）{</span></div><div><span style="font-size: 19px;">}</span></div><div><span style="font-size: 32px;"><span style="color: rgb(255, 0, 0);">注意事项</span></span></div><div><span style="font-size: 19px;"><span style="color: rgb(255, 0, 0);">一个方法的参数列表中准许有一个变长参数而且变长参数必须是最后一个</span></span></div><div><span style="font-size: 32px;"><span style="color: rgb(255, 0, 0);"><br/></span></span></div></div></span>
+</div></body></html> 
